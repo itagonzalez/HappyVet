@@ -15,13 +15,18 @@ import lombok.Data;
 @Data
 @Entity
 public class Cita {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(nullable=false)
+
+    @Column(nullable = false)
     private Integer cancelado = 0;
-    @Column(nullable=false)
+
+    // Cambié la columna a fecha_registro en lugar de fechaRegistro
+    @Column(name = "fecha_registro", nullable = false)
     private Date fechaRegistro;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "mascotaid", nullable = false)
     Mascota mascota;
