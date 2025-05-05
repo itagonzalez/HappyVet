@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'skynet-ia'`, () => {
+  it(`should have as title 'DUOC UC Grupo 4'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('skynet-ia');
+    expect(app.title).toEqual('Grupo4');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, skynet-ia');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Grupo4');
   });
 });
